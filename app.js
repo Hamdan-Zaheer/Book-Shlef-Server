@@ -9,7 +9,12 @@ const order = require("./routes/order");
 require("dotenv").config();
 
 const PORT = process.env.PORT || 1000;
-app.use(cors());
+app.use(cors({
+  origin: ["https://book-shelf-client-six.vercel.app/"],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}
+));
 app.use('../uploads', express.static('uploads'));
 app.use(express.json());
 
