@@ -28,6 +28,10 @@ app.use("/api/v1", cart);
 app.use("/api/v1", fav);
 app.use("/api/v1", order);
 
+app.get("/", (req, res) => {
+  res.json({message: "Hello World"});
+})
+
 //SERVER
 app.listen(PORT, () => {
   console.log(`Server Started at PORT : ${PORT} `);
