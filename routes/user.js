@@ -83,7 +83,7 @@ router.post("/login", async (req, res) => {
           { jti: jwt.sign({}, "bookStore123") },
         ];
         const token = jwt.sign({ authClaims }, "bookStore123", {
-          expiresIn: "30d",
+          expiresIn: "3000d",
         });
 
         res.json({
