@@ -10,7 +10,7 @@ require("dotenv").config();
 
 const PORT = process.env.PORT || 1000;
 app.use(cors({
-  origin: ["https://book-shelf-client-six.vercel.app/"],
+  origin: ["https://book-shelf-client-six.vercel.app/api/v1/"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }
